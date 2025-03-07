@@ -1,4 +1,4 @@
-# <img src="./utils/media/ai-foundry.jpg" alt="Azure Foundry" style="width:60px;height:80px"/> Azure AI Foundry Agent Service with Semantic Kernel
+# <img src="./utils/media/ai-foundry.jpg" alt="Azure Foundry" style="width:60px;height:60px"/> Azure AI Foundry Agent Service with Semantic Kernel
 
 This directory contains Jupyter notebooks for hands-on exercises with Azure AI Foundry.
 
