@@ -1,0 +1,28 @@
+using './main.bicep'
+
+param principalId = readEnvironmentVariable('AZURE_PRINCIPAL_ID', 'principalId')
+param aiHubName = 'hub-demo'
+param aiHubFriendlyName = 'Agents Hub resource'
+param aiHubDescription = 'This is an example AI resource for use in Azure AI Studio.'
+param aiProjectName = 'project-demo'
+param aiProjectFriendlyName = 'Agents Project resource'
+param aiProjectDescription = 'This is an example AI Project resource for use in Azure AI Studio.'
+param aiSearchName = 'agent-ai-search'
+param capabilityHostName = 'caphost1'
+param storageName = 'agent-storage'
+param aiServicesName = 'agent-ai-services'
+param modelName = 'gpt-4o'
+param modelFormat = 'OpenAI'
+param modelVersion = '2024-11-20'
+param modelSkuName = 'GlobalStandard'
+param modelCapacity = 100
+param modelLocation = 'eastus'
+param embeddingModelName = 'text-embedding-3-large'
+param embeddingModelFormat = 'OpenAI'
+param embeddingModelVersion = '1'
+param embeddingModelSkuName = 'Standard'
+param embeddingModelCapacity = 100
+param aiServiceAccountResourceId = ''
+param aiSearchServiceResourceId = ''
+param aiStorageAccountResourceId  = ''
+param aiServiceKind = 'AIServices'
