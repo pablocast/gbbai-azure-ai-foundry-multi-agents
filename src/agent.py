@@ -1,19 +1,22 @@
 from azure.identity.aio import DefaultAzureCredential
 
-from semantic_kernel.agents.azure_ai import AzureAIAgent
+from semantic_kernel.agents.azure_ai import AzureAIAgent, AzureAIAgentSettings
 from typing import List, Any, Optional
 from azure.identity.aio import DefaultAzureCredential
-
+import asyncio
 
 class Agent:
-    def __init__(self, model_deployment_name: str) -> None:
-        self.model_deployment_name: str = model_deployment_name
-        self.credential: Optional[DefaultAzureCredential] = None
-        self.client: Optional[AzureAIAgent] = None
+    def __init__(self, deployment_name: str, connection_string: str) -> None:
+        self.deployment_name = deployment_name
+        self.connection_string = connection_string
 
     async def __aenter__(self) -> "Agent":
+        self.ai_agent_settings = AzureAIAgentSettings.create(model_deployment_name=self.deployment_name)
         self.credential = DefaultAzureCredential()
-        self.client = await AzureAIAgent.create_client(credential=self.credential)
+        self.client = AzureAIAgent.create_client(
+            credential=self.credential,
+            conn_str=self.connection_string,
+        )
         return self
 
     async def __aexit__(
@@ -27,18 +30,16 @@ class Agent:
 
     async def create_agent(
         self,
-        model_deployment_name: str,
         name: str,
         instructions: str,
-        tools: List[Any]
+        tool: dict[str, Any],
     ) -> AzureAIAgent:
         agent_definition = await self.client.agents.create_agent(
-            model=model_deployment_name,
+            model=self.ai_agent_settings.model_deployment_name,
             name=name,
             instructions=instructions,
-            tools=[tool.definitions for tool in tools],
-            tool_resources=[tool.resources for tool in tools],
+            tools=tool["definitions"],
+            tool_resources=tool["resources"],
         )
-        agent = AzureAIAgent(client=self.client, definition=agent_definition)
-        
-        return agent
+        return AzureAIAgent(client=self.client, definition=agent_definition)
+
