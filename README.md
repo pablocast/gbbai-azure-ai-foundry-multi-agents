@@ -32,7 +32,7 @@ This sample uses [`azd`](https://learn.microsoft.com/azure/developer/azure-devel
 
 ## 🚀 3. Run the Notebooks
 - Execute the [1-create-index.ipynb](notebooks/1-create-infra.ipynb) to create the index that will be used be the Agents.
-- Execute the [2-ai-agents.ipynb](notebooks/2-ai-agents.ipynb) to run the multi-agent example
+- Execute the [2-ai-agents.ipynb](notebooks/2-ai-agents.ipynb) to run the multi-agent example. We implement a single-turn strategy, in which a selection strategy is used, to choose a specific agent designated to provide a response.
 
 
 

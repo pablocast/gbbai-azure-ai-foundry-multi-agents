@@ -17,3 +17,4 @@ asyncio
 typing  
 azure-storage-blob
 aiortc==1.10.1                                     
+tiktoken

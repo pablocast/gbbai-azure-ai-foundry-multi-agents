@@ -16,3 +16,4 @@ Add-Content -Path $envFilePath -Value ("AZURE_OPENAI_EMBEDDING_MODEL_NAME=" + (a
 Add-Content -Path $envFilePath -Value ("AZURE_OPENAI_EMBEDDING_MODEL_VERSION=" + (azd env get-value AZURE_OPENAI_EMBEDDING_MODEL_VERSION))
 add-Content -Path $envFilePath -Value ("AZURE_OPENAI_API_KEY=" + (azd env get-value AZURE_OPENAI_API_KEY))
 Add-Content -Path $envFilePath -Value ("AZURE_OPENAI_4o_MODEL_NAME=" + (azd env get-value AZURE_OPENAI_4o_MODEL_NAME))
+Add-Content -Path $envFilePath -Value ("TEMPLATE_DIR_PROMPTS=prompts/")
