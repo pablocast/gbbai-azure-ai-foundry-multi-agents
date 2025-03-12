@@ -30,10 +30,12 @@ This sample uses [`azd`](https://learn.microsoft.com/azure/developer/azure-devel
    The deployment creates multiple Azure resources and runs multiple jobs. It takes several minutes to complete. The deployment is complete when you get a command line notification stating "SUCCESS: Your up workflow to provision and deploy to Azure completed."
 
 
-## 🚀 3. Run the Notebooks
-- Execute the [1-create-index.ipynb](notebooks/1-create-infra.ipynb) to create the indices that will be used by the Agents. Each document inside the [data](data/) is mapped to a different index inside the same Azure Search resource.
-- Execute the [2-ai-agents.ipynb](notebooks/2-ai-agents.ipynb) to run the multi-agent example. We implement a single-turn strategy, in which a selection strategy is used, to choose a specific agent designated to provide a response.
+## 🚀 3. Run the Indexig Document
+- Place documents (.pdf or markdown) inside [data](data/) folder. Each document inside the [data](data/) is mapped to a different index inside the same Azure Search resource, as below:
 
+![Connect](utils/media/ai-search.jpg)
+
+- Execute the [1-create-index.ipynb](notebooks/1-create-infra.ipynb) to create the indices that will be used by the Agents. 
 
 
 ## 💣 4.Deleting Infrastructure
