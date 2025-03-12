@@ -31,12 +31,13 @@ This sample uses [`azd`](https://learn.microsoft.com/azure/developer/azure-devel
 
 
 ## 🚀 3. Run the Indexig Document
-- Place documents (.pdf or markdown) inside [data](data/) folder. Each document inside the [data](data/) is mapped to a different index inside the same Azure Search resource, as below:
-
-![Connect](utils/media/ai-search.jpg)
+- Place documents (.pdf or markdown) inside [data](data/) folder. 
 
 - Execute the [1-create-index.ipynb](notebooks/1-create-infra.ipynb) to create the indices that will be used by the Agents. 
 
+- Each document inside the [data](data/) is mapped to a different index inside the same Azure Search resource, as below:
+
+![Connect](utils/media/ai-search.jpg)
 
 ## 💣 4.Deleting Infrastructure
 
