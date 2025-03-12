@@ -60,3 +60,14 @@ resource storageRoleSearchService 'Microsoft.Authorization/roleAssignments@2022-
     principalType: 'ServicePrincipal'
   }
 }
+
+// Search Index Data Contributor
+var assignee = subscription().subscriptionId
+resource roleAssignment 'Microsoft.Authorization/roleAssignments@2020-04-01-preview' = {
+  name: guid(resourceGroup().id, assignee,  searchIndexDataContributorRole.id)
+  scope: resourceGroup()
+  properties: {
+    principalId: assignee
+    roleDefinitionId: subscriptionResourceId('Microsoft.Authorization/roleDefinitions', searchIndexDataContributorRole.id)
+  }
+}

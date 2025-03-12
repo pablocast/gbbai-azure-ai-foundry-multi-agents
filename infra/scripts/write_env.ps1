@@ -17,3 +17,6 @@ Add-Content -Path $envFilePath -Value ("AZURE_OPENAI_EMBEDDING_MODEL_VERSION=" +
 add-Content -Path $envFilePath -Value ("AZURE_OPENAI_API_KEY=" + (azd env get-value AZURE_OPENAI_API_KEY))
 Add-Content -Path $envFilePath -Value ("AZURE_OPENAI_4o_MODEL_NAME=" + (azd env get-value AZURE_OPENAI_4o_MODEL_NAME))
 Add-Content -Path $envFilePath -Value ("TEMPLATE_DIR_PROMPTS=prompts/")
+Add-Content -Path $envFilePath -Value ("APPLICATION_INSIGHTS_CONNECTION_STRING=" + (azd env get-value APPLICATION_INSIGHTS_CONNECTION_STRING))
+Add-Content -Path $envFilePath -Value ("SEMANTICKERNEL_EXPERIMENTAL_GENAI_ENABLE_OTEL_DIAGNOSTICS_SENSITIVE=true")
+Add-Content -Path $envFilePath -Value ("AZURE_BING_API_KEY=" + (azd env get-value AZURE_BING_API_KEY))

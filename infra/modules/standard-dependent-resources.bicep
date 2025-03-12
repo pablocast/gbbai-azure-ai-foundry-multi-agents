@@ -270,5 +270,7 @@ var aiServicesKeys = aiServices.listKeys()
 output openAIKey string = aiServicesKeys.key1
 
 output bingSearchName string = bingSearch.name
+var bingSearchKeys = bingSearch.listKeys()
+output bingSearchKey string = bingSearchKeys.primaryKey
 
 output keyvaultId string = keyVault.id

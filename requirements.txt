@@ -1,4 +1,4 @@
-azure-ai-projects
+azure-ai-projects==1.0.0b7
 azure-ai-inference[prompts]
 azure-identity
 azure-search-documents==11.6.0b4
@@ -18,3 +18,7 @@ typing
 azure-storage-blob
 aiortc==1.10.1                                     
 tiktoken
+azure-ai-inference[opentelemetry]
+opentelemetry-sdk
+opentelemetry-exporter-otlp
+azure-monitor-opentelemetry

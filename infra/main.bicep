@@ -237,4 +237,4 @@ output AZURE_OPENAI_EMBEDDING_MODEL_NAME string = embeddingModelName
 output AZURE_OPENAI_EMBEDDING_MODEL_VERSION string = embeddingModelVersion
 output AZURE_OPENAI_4o_MODEL_NAME string = modelName
 output AZURE_OPENAI_API_KEY string = aiDependencies.outputs.openAIKey
-
+output AZURE_BING_API_KEY string = aiDependencies.outputs.bingSearchKey
