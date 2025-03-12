@@ -42,6 +42,9 @@ param aiSearchName string
 @description('Resource ID of the AI Search resource')
 param aiSearchId string
 
+@description('Resource ID of the Application Insights resource')
+param appInsightsId string
+
 @description('Resource Group name of the AI Search resource')
 param aiSearchServiceResourceGroupName string
 
@@ -97,6 +100,7 @@ resource aiHub 'Microsoft.MachineLearningServices/workspaces@2024-10-01-preview'
 
     // dependent resources
     keyVault: keyVaultId
+    applicationInsights: appInsightsId
     storageAccount: storageAccountId
     systemDatastoresAuthMode: 'identity'
   }

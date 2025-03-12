@@ -140,6 +140,12 @@ module aiDependencies 'modules/standard-dependent-resources.bicep' = {
 
      // Bing search
       bingSearchName: 'bingsearch-${uniqueSuffix}'
+
+      // Log Analytics
+      logAnalyticsName: 'law-${name}-${uniqueSuffix}'
+
+      // Application Insights
+      insightsName: 'insights-${name}-${uniqueSuffix}'
     }
 }
 
@@ -167,6 +173,7 @@ module aiHub 'modules/standard-ai-hub.bicep' = {
     
     keyVaultId: aiDependencies.outputs.keyvaultId
     storageAccountId: aiDependencies.outputs.storageId
+    appInsightsId: aiDependencies.outputs.applicationInsightsId
 
     bingSearchName: aiDependencies.outputs.bingSearchName
   }

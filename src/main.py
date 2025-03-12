@@ -185,7 +185,7 @@ async def main():
 
 
 if __name__ == "__main__":
-    sample_questions = [
+    USER_INPUTS = [
         "O que é o Feirão Serasa Limpa Nome e como ele funciona?",
         "Quais são os descontos de até 99% oferecidos pelo Feirão Serasa Limpa Nome?",
         "Como posso consultar meu CPF pelo site da Serasa?",

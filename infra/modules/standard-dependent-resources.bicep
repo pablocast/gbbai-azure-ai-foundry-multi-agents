@@ -65,6 +65,12 @@ param aiStorageAccountResourceId string
 @description('The name of the Bing Search resource')
 param bingSearchName string
 
+@description('The name of the Log Analytics workspace')
+param logAnalyticsName string 
+
+@description('The name of the Application Insights resource')
+param insightsName string 
+
 var aiServiceExists = aiServiceAccountResourceId != ''
 var acsExists = aiSearchServiceResourceId != ''
 var aiStorageExists = aiStorageAccountResourceId != ''
@@ -243,6 +249,32 @@ resource documentsContainer 'Microsoft.Storage/storageAccounts/blobServices/cont
   properties: {}
 }
 
+resource logAnalytics 'Microsoft.OperationalInsights/workspaces@2023-09-01' = {
+  name: logAnalyticsName
+  location: location
+  properties: any({
+    retentionInDays: 30
+    features: {
+      searchVersion: 1
+    }
+    sku: {
+      name: 'PerGB2018'
+    }
+  })
+}
+
+
+resource applicationInsights 'Microsoft.Insights/components@2020-02-02' = {
+  name: insightsName
+  location: location
+  tags: {}
+  kind: 'web'
+  properties: {
+    Application_Type: 'web'
+    WorkspaceResourceId: logAnalytics.id
+    CustomMetricsOptedInType: 'WithDimensions'
+  }
+}
 
 output aiServicesName string =  aiServiceExists ? existingAIServiceAccount.name : aiServicesName
 output aiservicesID string = aiServiceExists ? existingAIServiceAccount.id : aiServices.id
@@ -274,3 +306,5 @@ var bingSearchKeys = bingSearch.listKeys()
 output bingSearchKey string = bingSearchKeys.primaryKey
 
 output keyvaultId string = keyVault.id
+
+output applicationInsightsId string = applicationInsights.id
