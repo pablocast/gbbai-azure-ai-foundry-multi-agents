@@ -39,7 +39,9 @@ This sample uses [`azd`](https://learn.microsoft.com/azure/developer/azure-devel
 
 ![Connect](utils/media/ai-search.jpg)
 
-## 💣 4.Deleting Infrastructure
+## 🚀 4. Multiple AI agents
+
+## 💣 5. Deleting Infrastructure
 
 You can delete the infrastruture created before by using `azd down --purge`
   
