@@ -1,3 +1,5 @@
 .venv
 .env
 .azure
+src/__pycache__
+src/.pytest_cache
