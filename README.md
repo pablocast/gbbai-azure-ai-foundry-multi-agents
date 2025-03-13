@@ -50,13 +50,19 @@ python main.py
 
 ## 🚀 6. Running MultiAgent Chat - Multiple conversations
 
-### Run the conversations
+### Run the sample conversations
 ```bash
 python scripts/run_conversations.py
 ```
+   - You may edit the sample conversations [here](./config/user_inputs.py)
 
-### Get the Logs from Azure AI Foundry Traces
+### Observe the Logs from Azure AI Foundry Project Traces
+![Connect](utils/media/ai-traces.jpg)
 
+### Get the Total Tokens from Azure AI Foundry Project Monitoring
+![Connect](utils/media/ai-insights.jpg)
+
+   - This dashboard shows total token consumption for the sample conversations in [here](./config/user_inputs.py)
 
 ## 💣 8. Deleting Infrastructure
 
