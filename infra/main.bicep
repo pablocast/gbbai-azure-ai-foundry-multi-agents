@@ -239,7 +239,6 @@ module addCapabilityHost 'modules/add-capability-host.bicep' = {
 output PROJECT_CONNECTION_STRING string = aiProject.outputs.projectConnectionString
 output AZURE_SEARCH_ENDPOINT string = 'https://${aiDependencies.outputs.aiSearchName}.search.windows.net'
 output AZURE_STORAGE_CONNECTION_STRING string = aiDependencies.outputs.storageAccountConnectionString
-output AZURE_STORAGE_CONTAINER_NAME string = aiDependencies.outputs.storageAccountContainerName
 output AZURE_OPENAI_ENDPOINT string = aiDependencies.outputs.openAIEndpoint
 output AZURE_OPENAI_EMBEDDING_MODEL_NAME string = embeddingModelName
 output AZURE_OPENAI_EMBEDDING_MODEL_VERSION string = embeddingModelVersion

@@ -74,7 +74,6 @@ param insightsName string
 var aiServiceExists = aiServiceAccountResourceId != ''
 var acsExists = aiSearchServiceResourceId != ''
 var aiStorageExists = aiStorageAccountResourceId != ''
-var documentContainerName = 'data'
 
 resource keyVault 'Microsoft.KeyVault/vaults@2022-07-01' = {
   name: keyvaultName
@@ -243,12 +242,6 @@ resource blobService 'Microsoft.Storage/storageAccounts/blobServices@2023-01-01'
   }
 }
 
-resource documentsContainer 'Microsoft.Storage/storageAccounts/blobServices/containers@2023-01-01' = {
-  parent: blobService
-  name: documentContainerName
-  properties: {}
-}
-
 resource logAnalytics 'Microsoft.OperationalInsights/workspaces@2023-09-01' = {
   name: logAnalyticsName
   location: location
@@ -295,7 +288,6 @@ output storageAccountSubscriptionId string = aiStorageExists ? aiStorageParts[2]
 var storageKeys = storage.listKeys()
 var primaryKey = storageKeys.keys[0].value
 output storageAccountConnectionString string = 'DefaultEndpointsProtocol=https;AccountName=${storage.name};AccountKey=${primaryKey};EndpointSuffix=core.windows.net'
-output storageAccountContainerName string = documentContainerName
 
 output openAIEndpoint string = 'https://${aiServices.name}.openai.azure.com'
 var aiServicesKeys = aiServices.listKeys()

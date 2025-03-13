@@ -38,7 +38,7 @@ tools = {
         service_endpoint=search_service_endpoint, index_name="score"
     ),
     AGENT_DEBT: SearchService(
-        service_endpoint=search_service_endpoint, index_name="debt"
+        service_endpoint=search_service_endpoint, index_name="dividas"
     ),
     AGENT_CC_WILL: SearchService(
         service_endpoint=search_service_endpoint, index_name="cartaowill"
@@ -68,7 +68,7 @@ tools = {
 agent_creator = Agent(endpoint=endpoint, deployment_name=deployment_name)
 
 # 4. Set up the multi-agent
-maximum_iterations = 1
+maximum_iterations = 2
 
 prompts = Environment(loader=FileSystemLoader("./" + os.getenv("TEMPLATE_DIR_PROMPTS")))
 
