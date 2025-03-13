@@ -182,16 +182,21 @@ async def main():
             user_input = input("User:> ")
         except (KeyboardInterrupt, EOFError):
             print("\n\nExiting chat...")
+            group_chat.is_complete = True
             break
 
         if user_input.strip().lower() == "exit":
             print("\n\nExiting chat...")
+            group_chat.is_complete = True
             break
        
         await group_chat.add_chat_message(message=ChatMessageContent(role=AuthorRole.USER, content=user_input))
         async for content in group_chat.invoke():
             print(f"Assistant:> # {content.role} - {content.name or '*'}: '{content.content}'")
-
+        
+        if group_chat.is_complete:
+            group_chat.is_complete = False
+            pass
 
 if __name__ == "__main__":
     asyncio.run(main())
