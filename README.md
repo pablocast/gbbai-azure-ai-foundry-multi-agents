@@ -1,4 +1,4 @@
-# <img src="./utils/media/ai-foundry.jpg" alt="Azure Foundry" style="width:60px;height:60px"/> Azure AI Foundry Agent Service with Semantic Kernel
+# <img src="./utils/media/ai-foundry.jpg" alt="Azure Foundry" style="width:60px;height:60px"/> Azure AI Foundry and Semantic Kernel for a MultiAgent application
 
 This directory contains Jupyter notebooks for hands-on exercises with Azure AI Foundry.
 
@@ -42,8 +42,8 @@ This sample uses [`azd`](https://learn.microsoft.com/azure/developer/azure-devel
 ## 🚀 4. Running MultiAgent Chat 
 
 
-
 ## 🚀 5. Get the Logs from Azure AI Foundry Traces
+
 
 ## 💣 6. Deleting Infrastructure
 
