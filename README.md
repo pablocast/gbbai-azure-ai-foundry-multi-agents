@@ -2,7 +2,7 @@
 
 This directory contains Jupyter notebooks for hands-on exercises with Azure AI Foundry.
 
-## 🔧 1.Prerequisites
+## 🔧 1. Prerequisites
 
 + [azd](https://learn.microsoft.com/azure/developer/azure-developer-cli/install-azd), used to deploy all Azure resources and assets used in this sample.
 
