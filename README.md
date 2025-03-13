@@ -41,7 +41,7 @@ This sample uses [`azd`](https://learn.microsoft.com/azure/developer/azure-devel
 ![Connect](utils/media/ai-search.jpg)
 
 ## 🚀 5. Running MultiAgent Chat 
-- In [main](main.py) , we create multiple agents and then orchestrate them using [Semantic Kernel](https://learn.microsoft.com/en-us/semantic-kernel/overview/) so that a specific agent is designated to provide a response
+- In [main](main.py) , we create multiple agents and then orchestrate them using [Semantic Kernel](https://learn.microsoft.com/en-us/semantic-kernel/overview/) and single-Turn, so that a specific agent is designated to provide a response
 
 - To run the application:
 ```bash
