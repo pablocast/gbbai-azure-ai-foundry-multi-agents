@@ -86,7 +86,7 @@ python scripts/run_conversations.py
 
    - This dashboard shows total token consumption for the sample conversations in [here](./config/user_inputs.py). This tokens include all calls to the Azure Open AI Service made by the multi agent chat. 
 
-## 💣 8. Deleting Infrastructure
+## 💣 7. Deleting Infrastructure
 
 You can delete the infrastruture created before by using `azd down --purge`
   
