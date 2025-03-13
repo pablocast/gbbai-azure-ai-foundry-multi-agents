@@ -68,6 +68,6 @@ resource roleAssignment 'Microsoft.Authorization/roleAssignments@2020-04-01-prev
   scope: resourceGroup()
   properties: {
     principalId: assignee
-    roleDefinitionId: subscriptionResourceId('Microsoft.Authorization/roleDefinitions', searchIndexDataContributorRole.id)
+    roleDefinitionId: searchIndexDataContributorRole.id
   }
 }
