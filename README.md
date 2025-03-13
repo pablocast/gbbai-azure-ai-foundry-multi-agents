@@ -32,23 +32,23 @@ This sample uses [`azd`](https://learn.microsoft.com/azure/developer/azure-devel
 ## 🔧 3. Architecture 
 ![Connect](utils/media/multi_agent_architecture.jpg)
 -  Document Storage and Indexing (Offline):
-   – Source documents (for example, Markdown or PDF files) are placed in an Azure Storage Account.
-   – An Azure Cognitive Search indexer job ingests these documents and creates a searchable index in Azure AI Search.
-   – This indexing step happens on a scheduled or as‐needed basis, so it is considered “offline.”
+   - Source documents (for example, Markdown or PDF files) are placed in an Azure Storage Account.
+   - An Azure AI Search indexer job ingests these documents and creates a searchable index in Azure AI Search.
+   - This indexing step happens on a scheduled or as‐needed basis, so it is considered “offline.”
 
 - Semantic Kernel Multi Agent App:
-   – At query time, the Semantic Kernel acts as the orchestrator.
-   – When a user asks, “What are the benefits of credit card X?” the Semantic Kernel can call multiple “AI Plugins” to enrich its response.
-   – AI Plugins might include:
-      • Azure AI Search: Looks up relevant content in the indexed documents.
-      • Azure Bing Search: Searches the public web for additional context.
-      • Azure OpenAI Service: Provides large‐language‐model reasoning and summarization.
+   - At query time, the Semantic Kernel acts as the orchestrator.
+   - When a user asks, “What are the benefits of credit card X?” the Semantic Kernel can call multiple “AI Plugins” to enrich its response.
+   - AI Plugins might include:
+      - Azure AI Search: Looks up relevant content in the indexed documents.
+      - Azure Bing Search: Searches the public web for additional context.
+      - Azure AI Foundry: Provides LLM reasoning and summarization.
 
 - Logging and Monitoring:
-   – All interactions and plugin calls are tracked in Azure Application Insights for operational visibility and performance monitoring.
+   - All interactions and plugin calls are tracked in Azure Application Insights for operational visibility and performance monitoring.
 
 - Hosting and Deployment:
-   – The final application can be hosted on Azure App Service, in containerized environments with Azure Container Apps.
+   - The final application can be hosted on Azure App Service, in containerized environments with Azure Container Apps.
 
 
 ## 🚀 4. Run the Indexig Document
