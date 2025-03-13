@@ -64,7 +64,7 @@ python scripts/run_conversations.py
 ### Get the Total Tokens from Azure AI Foundry Project Monitoring
 ![Connect](utils/media/ai-insights.jpg)
 
-   - This dashboard shows total token consumption for the sample conversations in [here](./config/user_inputs.py)
+   - This dashboard shows total token consumption for the sample conversations in [here](./config/user_inputs.py). This tokens include all calls to the Azure Open AI Service made by the multi agent chat. 
 
 ## 💣 8. Deleting Infrastructure
 
