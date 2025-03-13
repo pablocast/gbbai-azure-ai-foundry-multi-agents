@@ -9,10 +9,10 @@ from jinja2 import Environment, FileSystemLoader, Template
 from typing import List, Any
 
 # Own modules
-from plugins.search import SearchService
-from agent import Agent
-from multiagent import MultiAgent
-from insights_logging import set_up_logging, set_up_tracing, set_up_metrics
+from src.plugins.search import SearchService
+from src.agent import Agent
+from src.multiagent import MultiAgent
+from src.insights_logging import set_up_logging, set_up_tracing, set_up_metrics
 
 load_dotenv(override=True)
 
