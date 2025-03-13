@@ -29,8 +29,9 @@ This sample uses [`azd`](https://learn.microsoft.com/azure/developer/azure-devel
 
    The deployment creates multiple Azure resources and runs multiple jobs. It takes several minutes to complete. The deployment is complete when you get a command line notification stating "SUCCESS: Your up workflow to provision and deploy to Azure completed."
 
+## 🔧 3. Architecture 
 
-## 🚀 3. Run the Indexig Document
+## 🚀 4. Run the Indexig Document
 - Place documents (.pdf or markdown) inside [data](data/) folder. 
 
 - Execute the [1-create-index.ipynb](notebooks/1-create-infra.ipynb) to create the indices that will be used by the Agents. 
@@ -39,13 +40,13 @@ This sample uses [`azd`](https://learn.microsoft.com/azure/developer/azure-devel
 
 ![Connect](utils/media/ai-search.jpg)
 
-## 🚀 4. Running MultiAgent Chat 
+## 🚀 5. Running MultiAgent Chat 
 
 
-## 🚀 5. Get the Logs from Azure AI Foundry Traces
+## 🚀 6. Get the Logs from Azure AI Foundry Traces
 
 
-## 💣 6. Deleting Infrastructure
+## 💣 7. Deleting Infrastructure
 
 You can delete the infrastruture created before by using `azd down --purge`
   
