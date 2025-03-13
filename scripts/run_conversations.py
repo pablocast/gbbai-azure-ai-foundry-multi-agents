@@ -17,7 +17,7 @@ def input_generator(conversation: list):
     yield "exit"
 
 async def run_all_conversations():
-    for idx, conversation in enumerate(USER_INPUTS[:1]):
+    for idx, conversation in enumerate(USER_INPUTS):
         print(f"\n--- Starting conversation {idx + 1} ---")
         _gen = input_generator(conversation)
         __builtins__.input = lambda prompt="": next(_gen)
