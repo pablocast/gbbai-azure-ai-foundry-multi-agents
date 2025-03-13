@@ -59,6 +59,8 @@ python scripts/run_conversations.py
 ### Observe the Logs from Azure AI Foundry Project Traces
 ![Connect](utils/media/ai-traces.jpg)
 
+   - Traces provide full observability of all agent steps, including selecting the agent to answer (selection step in the image), executing the chosen agent’s tool (invoke_agent Score step in the image), and making the final decision on whether the user’s query was answered (termination step in the image).
+
 ### Get the Total Tokens from Azure AI Foundry Project Monitoring
 ![Connect](utils/media/ai-insights.jpg)
 
