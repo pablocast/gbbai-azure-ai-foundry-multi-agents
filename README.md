@@ -40,18 +40,25 @@ This sample uses [`azd`](https://learn.microsoft.com/azure/developer/azure-devel
 
 ![Connect](utils/media/ai-search.jpg)
 
-## 🚀 5. Running MultiAgent Chat 
+## 🚀 5. Running MultiAgent Chat - One conversation
 - In [main](main.py) , we create multiple agents and then orchestrate them using [Semantic Kernel](https://learn.microsoft.com/en-us/semantic-kernel/overview/) and single-Turn, so that a specific agent is designated to provide a response
 
-- To run the application:
+- To run the application and start a chat:
 ```bash
 python main.py
 ```
 
-## 🚀 6. Get the Logs from Azure AI Foundry Traces
+## 🚀 6. Running MultiAgent Chat - Multiple conversations
+
+### Run the conversations
+```bash
+python scripts/run_conversations.py
+```
+
+### Get the Logs from Azure AI Foundry Traces
 
 
-## 💣 7. Deleting Infrastructure
+## 💣 8. Deleting Infrastructure
 
 You can delete the infrastruture created before by using `azd down --purge`
   

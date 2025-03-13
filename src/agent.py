@@ -20,7 +20,7 @@ from azure.identity.aio import DefaultAzureCredential
 from typing import List, Any, Optional
 
 from semantic_kernel.connectors.search_engine import BingConnector
-from plugins.search import SearchService
+from src.plugins.search import SearchService
 
 
 class Agent:

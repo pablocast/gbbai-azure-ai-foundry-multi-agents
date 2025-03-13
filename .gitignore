@@ -3,3 +3,5 @@
 .azure
 src/__pycache__
 src/.pytest_cache
+__pycache__
+src/plugins/__pycache__
