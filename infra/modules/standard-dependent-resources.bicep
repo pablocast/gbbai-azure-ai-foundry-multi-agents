@@ -309,5 +309,4 @@ output keyvaultId string = keyVault.id
 
 output applicationInsightsId string = applicationInsights.id
 
-output applicationInsightsConnectionString string = 'InstrumentationKey=${applicationInsights.properties.InstrumentationKey};IngestionEndpoint=https://eastus-8.in.applicationinsights.azure.com/;LiveEndpoint=https://eastus.livediagnostics.monitor.azure.com/;ApplicationId=${applicationInsights.id}'
-
+output applicationInsightsConnectionString string = 'InstrumentationKey=${applicationInsights.properties.InstrumentationKey};IngestionEndpoint=https://eastus-8.in.applicationinsights.azure.com/;LiveEndpoint=https://eastus.livediagnostics.monitor.azure.com/;ApplicationId=${applicationInsights.properties.AppId}'
