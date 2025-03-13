@@ -209,6 +209,7 @@ module aiSearchRoleAssignments 'modules/ai-search-role-assignments.bicep' = {
     aiSearchName: aiDependencies.outputs.aiSearchName
     aiProjectPrincipalId: aiProject.outputs.aiProjectPrincipalId
     aiProjectId: aiProject.outputs.aiProjectResourceId
+    principalId: principalId
   }
 }
 

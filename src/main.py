@@ -235,6 +235,6 @@ if __name__ == "__main__":
         "Quais são as condições para solicitar o cartão Digio pelo Serasa Crédito?",
         "O cartão Digio oferece conversão de moeda para compras internacionais? Quais são as taxas aplicadas?",
         "O que é o Serasa Score e como ele influencia a obtenção de crédito?",
-        "Como posso melhorar meu Serasa Score conectando minhas contas e pagando dívidas via Pix?"
+        "Como posso melhorar meu Serasa Score conectando minhas contas e pagando dívidas via Pix?",
     ]
     asyncio.run(main())

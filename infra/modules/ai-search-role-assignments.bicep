@@ -9,6 +9,9 @@ param aiProjectPrincipalId string
 @description('Resource ID of the AI project')
 param aiProjectId string
 
+@description('Princal ID of the user')
+param principalId string
+
 resource searchService 'Microsoft.Search/searchServices@2024-06-01-preview' existing = {
   name: aiSearchName
   scope: resourceGroup()
@@ -62,12 +65,12 @@ resource storageRoleSearchService 'Microsoft.Authorization/roleAssignments@2022-
 }
 
 // Search Index Data Contributor
-var assignee = subscription().subscriptionId
 resource roleAssignment 'Microsoft.Authorization/roleAssignments@2020-04-01-preview' = {
-  name: guid(resourceGroup().id, assignee,  searchIndexDataContributorRole.id)
+  name: guid(subscription().id, resourceGroup().id, searchIndexDataContributorRole.id)
   scope: resourceGroup()
   properties: {
-    principalId: assignee
+    principalType: 'User'
+    principalId: principalId
     roleDefinitionId: searchIndexDataContributorRole.id
   }
 }
