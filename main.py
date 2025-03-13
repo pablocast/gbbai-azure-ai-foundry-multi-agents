@@ -83,13 +83,13 @@ multi_agent = MultiAgent(
     termination_template,
 )
 
-# Set up logging, tracing, and metrics
+# 5. Set up logging, tracing, and metrics
 set_up_logging()
 set_up_tracing()
 set_up_metrics()
 
 
-# Initialize the kernel
+# Main function to run the agents
 async def main():
 
     # 1. Initialize the agents
