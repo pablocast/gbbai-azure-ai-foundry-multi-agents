@@ -303,8 +303,11 @@ output openAIKey string = aiServicesKeys.key1
 
 output bingSearchName string = bingSearch.name
 var bingSearchKeys = bingSearch.listKeys()
-output bingSearchKey string = bingSearchKeys.primaryKey
+output bingSearchKey string = bingSearchKeys.key1
 
 output keyvaultId string = keyVault.id
 
 output applicationInsightsId string = applicationInsights.id
+
+output applicationInsightsConnectionString string = 'InstrumentationKey=${applicationInsights.properties.InstrumentationKey};IngestionEndpoint=https://eastus-8.in.applicationinsights.azure.com/;LiveEndpoint=https://eastus.livediagnostics.monitor.azure.com/;ApplicationId=${applicationInsights.id}'
+
