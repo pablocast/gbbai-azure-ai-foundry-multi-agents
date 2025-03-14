@@ -1,6 +1,6 @@
 # <img src="./utils/media/ai-foundry.jpg" alt="Azure Foundry" style="width:60px;height:60px"/> Azure AI Foundry and Semantic Kernel for a MultiAgent application
 
-This directory contains Jupyter notebooks for hands-on exercises with Azure AI Foundry.
+This repository exemplifies the construction of a MultiAgent application using [Semantic Kernel](https://learn.microsoft.com/en-us/semantic-kernel/overview/) and [Azure AI Foundry](https://azure.microsoft.com/en-us/products/ai-foundry/?msockid=32ef16738a19687b378c03de8bc46942). 
 
 ## 🔧 1. Prerequisites
 
